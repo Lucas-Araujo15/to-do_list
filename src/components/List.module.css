@@ -1,0 +1,95 @@
+.list {
+    gap: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.taskForm {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.5rem;
+    height: 3.375rem;
+}
+
+.taskForm input {
+    width: 39.875rem;
+    border: 1px solid var(--gray-700);
+    background: var(--gray-500);
+    font-size: 1rem;
+    padding: 1rem;
+    color: var(--gray-100);
+}
+
+.taskForm input:focus {
+    box-shadow: 0 0 0 2px var(--purple-dark);
+}
+
+.taskForm button {
+    width: 5.625rem;
+    background: var(--blue-dark);
+    border: none;
+    color: var(--gray-100);
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.taskForm button:hover {
+    background: var(--blue);
+}
+
+.taskForm button,
+.taskForm input {
+    border-radius: 8px;
+}
+
+.listStatus {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.1875rem;
+}
+
+.listStatus div {
+    display: flex;
+    min-width: 8.625rem;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.listStatus p {
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.listStatus div:nth-child(1) p {
+    color: var(--blue);
+}
+
+.listStatus div:nth-child(2) p {
+    color: var(--purple)
+}
+
+.listStatus span {
+    background: var(--gray-400);
+    min-width: 1.5rem;
+    padding: 0 0.5rem;
+    border-radius: 999px;
+
+    font-weight: 700;
+    color: var(--gray-100);
+    font-size: 0.75rem;
+}
+
+.listContent {
+    margin: 1.5rem auto 6rem auto;
+    gap: 0.75rem;
+    display: flex;
+    flex-direction: column;
+}

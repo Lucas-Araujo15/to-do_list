@@ -1,0 +1,29 @@
+.emptyList {
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: 1px solid var(--gray-400);
+    border-radius: 8px;
+    gap: 1rem;
+}
+
+.emptyList svg {
+    color: var(--gray-400);
+}
+
+.emptyList div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 1.5rem;
+}
+
+.emptyList p {
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.4rem;
+    color: var(--gray-300);
+}
