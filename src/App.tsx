@@ -69,7 +69,13 @@ function App() {
         <main>
           <div className={styles.list}>
             <form onSubmit={handleNewTask} className={styles.taskForm}>
-              <input type="text" onChange={handleNewTaskChange} onInvalid={handleNewTaskInvalid} value={newTaskText!.title} required placeholder='Adicione uma nova tarefa' />
+              <input
+                type="text"
+                onChange={handleNewTaskChange}
+                onInvalid={handleNewTaskInvalid}
+                value={newTaskText!.title}
+                required
+                placeholder='Adicione uma nova tarefa' />
               <button disabled={isNewTaskEmpty} type='submit'>Criar <PlusCircle size={24} /></button>
             </form>
             <div>

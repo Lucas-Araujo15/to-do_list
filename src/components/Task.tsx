@@ -23,7 +23,10 @@ export function Task({ isDone, onToggleTask, title, onDeleteTask }: TaskProps) {
 
     return (
         <div className={styles.task}>
-            <Checkbox.Root checked={isDone} onCheckedChange={handleToggleTask} className={styles.checkbox}>
+            <Checkbox.Root
+                checked={isDone}
+                onCheckedChange={handleToggleTask}
+                className={styles.checkbox}>
                 <Checkbox.Indicator>
                     <Check />
                 </Checkbox.Indicator>
