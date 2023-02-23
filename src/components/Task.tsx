@@ -4,22 +4,32 @@ import { Trash, Check } from 'phosphor-react'
 import * as Checkbox from "@radix-ui/react-checkbox";
 import { useState } from 'react';
 
-export function Task() {
-    const [checked, setChecked] = useState(false)
+interface TaskProps {
+    title: string,
+    isDone: boolean,
+    onToggleTask: (title: string) => void
+    onDeleteTask: (title: string) => void
+}
+
+export function Task({ isDone, onToggleTask, title, onDeleteTask }: TaskProps) {
 
     function handleToggleTask() {
-        setChecked(!checked)
+        onToggleTask(title)
+    }
+
+    function handleDeleteTask() {
+        onDeleteTask(title)
     }
 
     return (
         <div className={styles.task}>
-            <Checkbox.Root checked={checked} onCheckedChange={handleToggleTask} className={styles.checkbox}>
+            <Checkbox.Root checked={isDone} onCheckedChange={handleToggleTask} className={styles.checkbox}>
                 <Checkbox.Indicator>
                     <Check />
                 </Checkbox.Indicator>
             </Checkbox.Root>
-            <p aria-checked={checked} defaultChecked={checked}>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
-            <Trash size={24} />
+            <p aria-checked={isDone}>{title}</p>
+            <Trash onClick={handleDeleteTask} size={24} />
         </div>
     )
 }
